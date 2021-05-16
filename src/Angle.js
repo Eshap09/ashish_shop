@@ -18,7 +18,6 @@ function Angle() {
     const angles=[{it:'A25x3', dif:5800},{it:'A32x3', dif:5500},{it:'A35x5', dif:5200},{it:'A40x5',dif:5000},{it:'A50x5',dif:4400},{it:'A65x5',dif:4400}];
 
   return (
-
     <form className="form">
        <div className="formm">
        <h4>Basic price</h4>
