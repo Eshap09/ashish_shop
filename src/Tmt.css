@@ -1,0 +1,19 @@
+.table{
+  display: flex;
+  width: 800px;
+  justify-content: space-around;
+  margin-left: 25px;
+  margin-bottom: 5px;
+  padding-top: 15px;
+  margin-top:50px;
+}
+
+
+@media only screen and (max-device-width: 480px)
+{
+  .table{
+    width:460px;
+    justify-content: space-around;
+    padding-left: 15px; 
+  }
+}

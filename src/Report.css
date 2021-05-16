@@ -1,0 +1,19 @@
+.report {
+  display: flex;
+  width: 800px;
+  justify-content: space-around;
+  border: 1px solid gray;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  padding-top: 15px;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .report {
+    display: flex;
+    width:450px;
+    margin-left: 25px;
+    border: 1px solid gray;
+    padding-top: 15px;
+  }
+}

@@ -1,43 +1,24 @@
-.form{
+.formm{
    display: flex;
-   flex-direction: column;
-   place-items: center;
+   width:500px;
+   justify-content: space-around;
+   align-items: center;
    margin-top: 50px;
-   border:1px solid lightgray;
+   margin-left:auto;
+   margin-right: auto;
+   border: 1px solid gray;
+   padding: 20px;
+
 }
 
-.form__top{
-    display: flex;
-    width:100%;
-    align-items: center;
-    justify-content:center;
-    padding:10px;
-    margin-top:10px;
+.table_format{
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.form__top h2{
-    margin-right: 20px;
-}
-.form__middle{
-    display: flex;
-    flex-direction: column;
-    margin:15px 0px;
-    padding:10px;
-    align-items: center;
-}
-
-.form__middle h4{
-    margin-right: 10px;
-    margin-top:5px;
-    font-weight: normal;
-}
-.form__middlefirst{
-    display: flex;
-    align-items: center;
-}
-.form__middleinput{
-    text-align: justify;
-}
-.value{
-   margin:auto;
+@media only screen and (max-device-width: 480px)
+{
+    .table{
+        width:200px;
+    }
 }

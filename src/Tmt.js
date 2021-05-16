@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import "./Angle.css";
+import "./Tmt.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import { Input } from "@material-ui/core";
 import { Button } from "react-bootstrap";
+import Report from "./Report";
 function Tmt() {
 
     const[bamt,setbamt]=useState();
@@ -15,56 +16,34 @@ function Tmt() {
         setshow(true);    
     }
     
-    const handleitem=(e)=>{
-        setitem(e);
-        let result;
-        for(let i=0;i<angles.length;i++)
-        {
-            if(angles[i].it===e)
-            {
-                result=angles[i].dif;
-            }
-        }
-        setdiff(result);
-
-    }
-
-    const toggle=()=>{
-        setshow(false);
-    }
-
     const angles=[{it:'G6mm', dif:1500},{it:'G8mm', dif:1000},{it:'G10mm', dif:0},{it:'G12mm',dif:0},{it:'G16mm',dif:0}];
 
   return (
 
     <form className="form">
-    <div className="form__top">
-    <h2>Choose item</h2>      
-    <DropdownButton alignRight title={item} id="dropdown-menu-align-right" onSelect={handleitem}>
-    {angles.map(ang=>(
-         
-         <Dropdown.Item eventKey={ang.it}>{ang.it}</Dropdown.Item>
-    
-  ))}
-   </DropdownButton>
-   </div>
-   <div className="form__middle">
-       <div className="form__middlefirst">
+       <div className="formm">
        <h4>Basic price</h4>
-       <Input placeholder="Enter amount" className="form__middleinput" type="number" value={bamt} onChange={e=>setbamt(+e.target.value)}/>
-        </div>
-        <div className="form__middlefirst">
-        <h4>Difference</h4>
-        <Input placeholder="Enter difference" className="form__middleinput" type="number" value={diff} onChange={e=>setdiff(+e.target.value)} />   
-        </div>
-   </div>
-   <div classname="form__last">
-       <Button variant="success" onClick={total}>Total Amount</Button>
-        {show && <h3 className="value" onClick={toggle} > Rs= {((bamt+diff+250)*1.18+2500)}</h3> }     
-   </div>
+       <Input placeholder="Enter amount" className="form__basicinput" type="number" value={bamt} onChange={e=>setbamt(+e.target.value)}/>
+       <div classname="form__last">
+       <Button variant="success" onClick={total}>Show All</Button>   
+       </div>
+       </div>
+    <div className="table_format">
+    {show && <div className="table">
+    <h5>Item</h5>
+    <h5>Difference</h5>
+    <h5>Amount</h5>
+    </div>   
+}
+    {show && angles.map(ang=>(
+         <Report 
+          item={ang.it}
+          diff={ang.dif}
+          price={bamt}
+          />
+    ))}
+    </div>
    </form>
-
-    
     )
 } 
 export default Tmt;
