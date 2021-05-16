@@ -62,13 +62,14 @@ function Pipes() {
     <h5>Amount</h5>
     </div>   
 }
-    {show && squares.map(ang=>(
+     {show && squares.map(ang=>( 
          <Report 
           item={ang.it}
           diff={ang.dif}
           price={bamt}
           />
     ))}
+    
     </div>
    </form>
 
