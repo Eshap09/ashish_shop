@@ -67,6 +67,7 @@ function Pipes() {
           item={ang.it}
           diff={ang.dif}
           price={bamt}
+          weight={ang.weight}
           />
     ))}
     

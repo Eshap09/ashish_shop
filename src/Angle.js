@@ -41,9 +41,7 @@ function Angle() {
           />
     ))}
     </div>
-   </form>
-
-    
+   </form>    
     )
 } 
 export default Angle;
